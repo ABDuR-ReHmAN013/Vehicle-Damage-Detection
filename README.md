@@ -1,67 +1,121 @@
-No — it should **not be empty**.
+# 🚗 Vehicle Damage Detection
 
-Even for a simple deployment, a good `README.md` actually helps Streamlit Cloud, GitHub viewers, and future you understand the project.
+A computer vision web application that detects vehicle damage from uploaded images using a custom-trained YOLOv8 model. The application provides real-time damage detection, confidence scores, and annotated visual results through an interactive Streamlit interface.
 
-Think of it as the “front page” of your app repo.
+## 🌐 Live Demo
+
+**Try the application here:**
+
+https://vehicle-damage-detection-cv.streamlit.app/
 
 ---
 
-# ✅ Minimum GOOD README (recommended for you)
+## Features
 
-You can use this as-is:
+* Upload vehicle images for damage inspection
+* Real-time damage detection using YOLOv8
+* Automatic annotation of detected damage regions
+* Confidence score reporting for each detection
+* Modern and interactive Streamlit interface
+* Fully deployed and accessible online
 
-````md
-# 🚗 Vehicle Damage Detection App
+---
 
-This is a Streamlit web application that detects vehicle damage using a YOLOv8 deep learning model.
+## Model Information
 
-## 🔍 Features
-- Upload vehicle images (JPG, PNG)
-- Detects damage regions using a trained YOLOv8 model
-- Displays bounding boxes with confidence scores
-- Clean and interactive UI built with Streamlit
+| Attribute    | Value                    |
+| ------------ | ------------------------ |
+| Architecture | YOLOv8                   |
+| Framework    | Ultralytics              |
+| Task         | Vehicle Damage Detection |
+| Weights      | `best.pt`                |
 
-## 🧠 Model
-- Model: YOLOv8
-- Custom trained weights: `best.pt`
-- Framework: Ultralytics YOLO
+---
 
-## 📦 Installation (Local Setup)
+## Screenshots
 
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-pip install -r requirements.txt
-streamlit run app.py
-````
+### Upload Interface
 
-## 📁 Project Structure
+![Upload Interface](Screenshot 2026-06-22 174917.png)
 
-```
-vehicle-damage-app/
+### Detection Results
+
+![Detection Results](C:\Vehicle-Damage-Detection\Screenshot 2026-06-22 174809.png)
+
+### Detection Analytics
+
+![Detection Analytics](C:\Vehicle-Damage-Detection\Screenshot 2026-06-22 174849.png)
+
+---
+
+## Project Structure
+
+```text
+Vehicle-Damage-Detection/
 │
 ├── app.py
-├── models/
-│   └── best.pt
 ├── requirements.txt
-└── README.md
+├── README.md
+│
+├── screenshots/
+│   ├── home.png
+│   ├── detection.png
+│   └── analytics.png
+│
+└── models/
+    └── best.pt
 ```
 
-## 🚀 Run App
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/ABDuR-ReHmAN013/Vehicle-Damage-Detection.git
+cd Vehicle-Damage-Detection
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-## 📌 Tech Stack
+Open your browser and visit:
 
-* Streamlit
+```text
+http://localhost:8501
+```
+
+---
+
+## Technologies Used
+
 * Python
-* YOLOv8 (Ultralytics)
+* Streamlit
+* YOLOv8
+* Ultralytics
 * OpenCV
 * Pillow
 
-## 👨‍💻 Author
+---
 
-Abdur Rehman
+## Author
 
+**Abdur Rehman**
+
+Computer Science Student • Web Developer • Computer Vision Enthusiast
+
+---
+
+## License
+
+This project is intended for educational, learning, and portfolio purposes.
