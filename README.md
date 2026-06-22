@@ -36,15 +36,15 @@ https://vehicle-damage-detection-cv.streamlit.app/
 
 ### Upload Interface
 
-![Upload Interface](Screenshot 2026-06-22 174917.png)
+![Upload Interface](Screenshot%202026-06-22%20174917.png)
 
 ### Detection Results
 
-![Detection Results](C:\Vehicle-Damage-Detection\Screenshot 2026-06-22 174809.png)
+![Detection Results](Screenshot%202026-06-22%20174809.png)
 
 ### Detection Analytics
 
-![Detection Analytics](C:\Vehicle-Damage-Detection\Screenshot 2026-06-22 174849.png)
+![Detection Analytics](Screenshot%202026-06-22%20174849.png)
 
 ---
 
@@ -68,34 +68,7 @@ Vehicle-Damage-Detection/
 
 ---
 
-## Installation
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/ABDuR-ReHmAN013/Vehicle-Damage-Detection.git
-cd Vehicle-Damage-Detection
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the Application
-
-```bash
-streamlit run app.py
-```
-
-Open your browser and visit:
-
-```text
-http://localhost:8501
-```
-
----
 
 ## Technologies Used
 
@@ -116,6 +89,3 @@ Computer Science Student • Web Developer • Computer Vision Enthusiast
 
 ---
 
-## License
-
-This project is intended for educational, learning, and portfolio purposes.
