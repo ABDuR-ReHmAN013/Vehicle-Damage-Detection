@@ -409,32 +409,35 @@ if uploaded_file is not None:
     st.markdown('<div class="section-label">03 / DETECTION LOG</div>', unsafe_allow_html=True)
 
     if n_detections == 0:
-        st.markdown("""
-        <div class="clear-panel">
-            <span class="icon">✓</span>
-            <div>
-                <div class="msg">No damage detected</div>
-                <div class="sub">Scan completed · vehicle surface within normal parameters</div>
-            </div>
+    st.markdown("""
+    <div class="clear-panel">
+        <span class="icon">✓</span>
+        <div>
+            <div class="msg">No damage detected</div>
+            <div class="sub">Scan completed · vehicle surface within normal parameters</div>
         </div>
-        """, unsafe_allow_html=True)
-    else:
-     rows = ""
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    rows = ""
+
     for i, box in enumerate(result.boxes, start=1):
-            cls_id = int(box.cls[0])
-            conf = float(box.conf[0])
-            damage_type = model.names[cls_id]
-            pct = conf * 100
-            rows += (
-                f'<div class="result-row">'
-                f'<div class="result-index">{i:02d}</div>'
-                f'<div class="result-name">{damage_type}</div>'
-                f'<div class="result-bar-track">'
-                f'<div class="result-bar-fill" style="width:{pct}%;"></div>'
-                f'</div>'
-                f'<div class="result-conf">{pct:.1f}%</div>'
-                f'</div>'
-            )
+        cls_id = int(box.cls[0])
+        conf = float(box.conf[0])
+        damage_type = model.names[cls_id]
+        pct = conf * 100
+
+        rows += (
+            f'<div class="result-row">'
+            f'<div class="result-index">{i:02d}</div>'
+            f'<div class="result-name">{damage_type}</div>'
+            f'<div class="result-bar-track">'
+            f'<div class="result-bar-fill" style="width:{pct}%;"></div>'
+            f'</div>'
+            f'<div class="result-conf">{pct:.1f}%</div>'
+            f'</div>'
+        )
+
     st.markdown(f'<div>{rows}</div>', unsafe_allow_html=True)
 
     st.markdown(
